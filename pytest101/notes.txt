@@ -3,3 +3,6 @@ Why would i test?
 -> Give examples to others of how code is used
 -> Get a safety net for future changes
 
+PYTEST:
+-> The most popular python package for testing
+-> The basis for a rich ecosystem of testing plugins and extension
