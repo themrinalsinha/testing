@@ -4,9 +4,14 @@ import pytest
 # Using setup and teardown method
 db = None
 def setup_module(module):
+    print('\n', '-'*10, ' setup module ', '-'*10)
     global db
     db = StudentDB()
     db.connect('data.json')
+
+def teardown_module(module):
+    print('\n', '-'*10, ' teardown module ', '-'*10)
+    db.close()
 
 def test_scott_data():
     # db = StudentDB()
