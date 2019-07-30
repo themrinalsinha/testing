@@ -24,5 +24,10 @@ def test_division():
 def test_add_weird_stuff():
     calculator = Calculator()
     with pytest.raises(CalculatorError):
-        result = calculator.add('two', 3)
+        result = calculator.add('two', 'asdfjk')
     # assert result == 5
+
+def test_divide_by_zero():
+    calculator = Calculator()
+    with pytest.raises(CalculatorError):
+        result = calculator.division(1, 0)
