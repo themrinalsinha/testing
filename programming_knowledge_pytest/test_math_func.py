@@ -1,26 +1,26 @@
 import math_func
 import pytest
 
-@pytest.mark.number
+# @pytest.mark.number
 def test_add():
     assert math_func.add(7, 3) == 10
     assert math_func.add(7, 1) == 8
     assert math_func.add(7)    == 9
 
-@pytest.mark.number
+# @pytest.mark.number
 def test_product():
     assert math_func.product(7, 10) == 70
     assert math_func.product(7)     == 14
     # assert math_func.product(7)     == 12
 
-@pytest.mark.strings
+# @pytest.mark.strings
 def test_add_string():
     result = math_func.add('hello ', 'world')
     assert result == 'hello world'
     assert type(result) is str
     assert 'helio' not in result
 
-@pytest.mark.strings
+# @pytest.mark.strings
 def test_product_string():
     assert math_func.product('hello ', 3) == 'hello hello hello '
     result = math_func.product('hello ')
@@ -44,3 +44,11 @@ def test_product_string():
 # Running tests with marker ('-m') option
 # $ pytest -v -m number
 # $ pytest -v -m strings
+
+# Running tests with ('-x') option
+# It'll exit with first error
+
+# if you want to supress the stack tract means just show if function passed or not
+# $ pytest -v --tb=no
+
+# maximum fail -> $ pytest -v --maxfail=2
