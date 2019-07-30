@@ -72,3 +72,6 @@ def test_product_string_1():
 
 # Note by default you can't print anything in test file
 # to do so: $ pytest -v -s
+
+# -q will run it in quite mode no unnecessary information shown
+# $ pytest -q
