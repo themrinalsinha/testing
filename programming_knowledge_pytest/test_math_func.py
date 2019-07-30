@@ -1,5 +1,6 @@
 import math_func
 import pytest
+import sys
 
 # @pytest.mark.number
 def test_add():
@@ -22,6 +23,14 @@ def test_add_string():
 
 @pytest.mark.skip(reason='just testing the skip function')
 def test_product_string():
+    assert math_func.product('hello ', 3) == 'hello hello hello '
+    result = math_func.product('hello ')
+    assert result == 'hello hello '
+    assert type(result) is str
+    assert 'hello' in result
+
+@pytest.mark.skipif(sys.version_info < (3, 8), reason='python version is less than 3.8')
+def test_product_string_1():
     assert math_func.product('hello ', 3) == 'hello hello hello '
     result = math_func.product('hello ')
     assert result == 'hello hello '
@@ -57,3 +66,5 @@ def test_product_string():
 # if you want to show the reason for skips in verbose mode on the terminal
 # you can pass -rsx to report skipped tests
 # $ pytest -v -rsx
+
+# skipif - to skip in certain condition
