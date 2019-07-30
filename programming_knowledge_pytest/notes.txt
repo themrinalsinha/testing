@@ -10,3 +10,31 @@ why unit test?
     -> faster development
     -> better design
 
+# # # Different ways of running scripts
+# $ pytest
+# $ pytest -v
+# $ pytest sample_testing.py -v          # with different file name
+# $ pytest test_math_func.py::test_add   # to run specific function
+
+# If you just want to run functions with add
+# $ pytest -v -k "add"                   # function havig add in name
+# $ pytest -v -k "add or string"         # function having add or string in name
+# $ pytest -v -k "add and string"        # function having add and string in name
+
+
+# Running tests with marker ('-m') option
+# $ pytest -v -m number
+# $ pytest -v -m strings
+
+# Running tests with ('-x') option
+# It'll exit with first error
+
+# if you want to supress the stack tract means just show if function passed or not
+# $ pytest -v --tb=no
+
+# maximum fail -> $ pytest -v --maxfail=2
+
+# skipping a particular function for test
+# if you want to show the reason for skips in verbose mode on the terminal
+# you can pass -rsx to report skipped tests
+# $ pytest -v -rsx
