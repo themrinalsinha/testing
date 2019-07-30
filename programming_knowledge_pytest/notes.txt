@@ -1,0 +1,12 @@
+Unit-Testing:
+    Unit testing is a software testing method by which individual units of
+    source code are tested to determine whether they are fit for use.
+
+why unit test?
+    -> Tests reduce bugs in new features and existing features
+    -> tests are good documentation
+    -> tests reduce the cost of change
+    -> faster debugging
+    -> faster development
+    -> better design
+
