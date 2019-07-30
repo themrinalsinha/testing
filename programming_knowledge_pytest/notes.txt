@@ -38,3 +38,11 @@ why unit test?
 # if you want to show the reason for skips in verbose mode on the terminal
 # you can pass -rsx to report skipped tests
 # $ pytest -v -rsx
+
+# skipif - to skip in certain condition
+
+# Note by default you can't print anything in test file
+# to do so: $ pytest -v -s
+
+# -q will run it in quite mode no unnecessary information shown
+# $ pytest -q
