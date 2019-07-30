@@ -10,6 +10,7 @@ def test_add():
 
 # @pytest.mark.number
 def test_product():
+    print('++ if you see this -s is passed ++')
     assert math_func.product(7, 10) == 70
     assert math_func.product(7)     == 14
     # assert math_func.product(7)     == 12
@@ -68,3 +69,6 @@ def test_product_string_1():
 # $ pytest -v -rsx
 
 # skipif - to skip in certain condition
+
+# Note by default you can't print anything in test file
+# to do so: $ pytest -v -s
