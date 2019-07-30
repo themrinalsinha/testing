@@ -1,0 +1,5 @@
+Why would i test?
+-> Proves that the code works like I think it should
+-> Give examples to others of how code is used
+-> Get a safety net for future changes
+
