@@ -20,7 +20,7 @@ def test_add_string():
     assert type(result) is str
     assert 'helio' not in result
 
-# @pytest.mark.strings
+@pytest.mark.skip(reason='just testing the skip function')
 def test_product_string():
     assert math_func.product('hello ', 3) == 'hello hello hello '
     result = math_func.product('hello ')
@@ -52,3 +52,8 @@ def test_product_string():
 # $ pytest -v --tb=no
 
 # maximum fail -> $ pytest -v --maxfail=2
+
+# skipping a particular function for test
+# if you want to show the reason for skips in verbose mode on the terminal
+# you can pass -rsx to report skipped tests
+# $ pytest -v -rsx
